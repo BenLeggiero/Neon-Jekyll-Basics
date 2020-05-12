@@ -23,10 +23,10 @@
 <meta property="og:site_name"                      content="{{ site.name }}" />
 <meta property="twitter:site"                      content="{{ site.name }}" />
 {% if site.social.twitter %}
-<meta name="twitter:creator"                       content="@{{ site.social.twitter }}" /><!-- Tell twitter that this was made by {{ site.author.full-name }} -->
+<meta name="twitter:creator"                       content="@{{ site.social.twitter }}" /><!-- Tell twitter that this was made by {{ site.author.name }} -->
 {% endif %}
 <meta property="og:type"                           content="{% if page.type %}{{ page.type }}{% else %}profile{% endif %}" />
-<meta name="author"                                content="{{ site.author.full-name }}" />
+<meta name="author"                                content="{{ site.author.name }}" />
 <meta property="profile:first_name"                content="{{ site.author.first-name }}" />
 <meta property="profile:last_name"                 content="{{ site.author.last-name }}" />
 <meta property="profile:username"                  content="{{ site.social.default-username }}" />
