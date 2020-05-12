@@ -47,12 +47,12 @@
 <meta property="article:modified_time"             content="{{ page.date.modified }}" />
 {% endif %}
 
-{% if site.social.twitter %}
-<link href="https://twitter.com/{{ site.social.twitter }}" rel="me" />
-{% endif %}
-{% if site.social.microblog %}
-<link href="https://micro.blog/{{ site.social.microblog }}" rel="me" />
-{% endif %}
-{% if site.social.mastodon %}
-<link href="https://{{ site.social.mastodon.instance }}/@{{ site.social.mastodon.username }}" rel="me" />
-{% endif %}
+{%- if site.social.twitter %}
+<link rel="me" href="https://twitter.com/{{ site.social.twitter }}" />
+{%- endif %}
+{%- if site.social.microblog %}
+<link rel="me" href="https://micro.blog/{{ site.social.microblog }}" />
+{%- endif %}
+{%- if site.social.mastodon %}
+<link rel="me" href="https://{{ site.social.mastodon.instance }}/@{{ site.social.mastodon.username }}" />
+{%- endif %}
