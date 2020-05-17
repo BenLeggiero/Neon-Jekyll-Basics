@@ -33,9 +33,9 @@
 <meta property="profile:username"                  content="{{ site.social.default-username }}" />
 <meta name="twitter:card"                          content="summary_large_image" /><!-- Tell twitter that this link can be presented as a large image with a summary -->
 <meta name="msapplication-TileImage"               content="/images/MS-Tile-Image.png" /><!-- When pinned as a tile for Windows' Start, this is the image -->
-<meta property="og:image"                          content="/images/Social-Preview.png" /><!-- Image for sharing on social networks -->
-<meta property="twitter:image"                     content="/images/Social-Preview.png" />
-<meta name="twitter:image:src"                     content="/images/Social-Preview.png" />
+<meta property="og:image"                          content="{{ page.social-preview-image-url | default: page.hero-image | default: '/images/Social-Preview.png' }}" /><!-- Image for sharing on social networks -->
+<meta property="twitter:image"                     content="{{ page.social-preview-image-url | default: page.hero-image | default: '/images/Social-Preview.png' }}" />
+<meta name="twitter:image:src"                     content="{{ page.social-preview-image-url | default: page.hero-image | default: '/images/Social-Preview.png' }}" />
 {% if site.theme-color %}
 <meta name="msapplication-TileColor"               content="{{ site.theme-color }}" /><!-- When pinned as a tile for Windows' Start, this is the tile's BG color -->
 <meta name="theme-color"                           content="{{ site.theme-color }}"/><!-- Color in Chrome address bar -->
