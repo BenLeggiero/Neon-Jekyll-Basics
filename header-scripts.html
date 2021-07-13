@@ -1,5 +1,9 @@
 
-<script src="https://shared.bhstudios.org/_js/jquery-bh-preferred.js">/* jQuery */</script>
+{%- assign jQuery = include.jQuery | default: layout.jQuery | default: site.jQuery | default: true %}
+
+{%- if jQuery %}
+<script src="{% if jQuery == true -%} https://code.jquery.com/jquery-3.x-git.slim.min.js {%- else -%} {{ jQuery }} {%- endif -%}">/* jQuery */</script>
+{%- endif %}
 <script src="https://scripts.bhstudios.org/assets/v2/general/js/lib/kotlin.js">/* Kotlin/JS for BHStudios General Script */</script>
 <script src="https://scripts.bhstudios.org/assets/v2/general/js/BHStudios%20General%20Scripts.js">/* BHStudios General Script */</script>
 
