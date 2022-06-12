@@ -42,7 +42,7 @@ If you got this:
 
 
 1: DECLARATION OF COPYRIGHT
-   This Product is copyright Ky Leggiero (c) 2020 BH-1-PS
+   This Product is copyright Ky Leggiero (c) 2022 BH-1-PS
 
    Ky Leggiero may be reached at KyLeggiero@Gmail.com
 
