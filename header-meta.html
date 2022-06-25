@@ -27,14 +27,27 @@
 {% endif %}
 <meta property="og:type"                           content="{{ page.type | default: site.type | default: 'website' }}" />
 <meta property="og:url"                            content="{{ site.url }}{{ page.url }}" />
-{%- if site.author -%}
+{%- if site.author %}
 <meta name="author"                                content="{{ site.author.name }}" />
+{%- if site.author.first-name %}
 <meta property="profile:first_name"                content="{{ site.author.first-name }}" />
+{%- endif %}
+{%- if site.author.last-name %}
 <meta property="profile:last_name"                 content="{{ site.author.last-name }}" />
 {%- endif %}
-{%- if site.social.default-username -%}
+{%- endif %}
+{%- if site.social.default-username %}
 <meta property="profile:username"                  content="{{ site.social.default-username }}" />
 {%- endif %}
+
+<link rel="apple-touch-icon" type="image/png" href="{{ site.url }}{{ site.baseurl | default: '' }}/_img/Icon%201.1.1%20(1024p).png" />
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
+<link rel="shortcut icon" type="image/x-icon" href="{{ site.url }}{{ site.baseurl | default: '' }}/favicon.ico"/>
+<link rel="shortcut icon" type="image/icns" href="/favicon.icns"/>
+<link rel="shortcut icon" type="image/icns" href="{{ site.url }}{{ site.baseurl | default: '' }}/favicon.icns"/>
+<link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+<link rel="shortcut icon" type="image/png" href="{{ site.url }}{{ site.baseurl | default: '' }}/favicon.png"/>
+
 <meta name="twitter:card"                          content="summary_large_image" /><!-- Tell twitter that this link can be presented as a large image with a summary -->
 <meta name="msapplication-TileImage"               content="/images/MS-Tile-Image.png" /><!-- When pinned as a tile for Windows' Start, this is the image -->
 <meta property="og:image"                          content="{{ page.social-preview-image-url | default: page.hero-image | default: site.social-preview-image-url | default: '/images/Social-Preview.png' }}" /><!-- Image for sharing on social networks -->
